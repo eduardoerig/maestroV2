@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap');
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      width:1080px; height:1080px; overflow:hidden;
+      font-family:'Montserrat',sans-serif;
+      background:linear-gradient(135deg,#0E2E3C 0%,#081320 100%);
+      color:#FFFFFF;
+      display:flex; flex-direction:column;
+      padding:64px 90px;
+    }
+
+    .crop { position:absolute; width:34px; height:34px; }
+    .crop.tl { top:54px; left:54px; border-top:2px solid rgba(25,163,232,.5); border-left:2px solid rgba(25,163,232,.5); }
+    .crop.tr { top:54px; right:54px; border-top:2px solid rgba(25,163,232,.5); border-right:2px solid rgba(25,163,232,.5); }
+    .crop.bl { bottom:54px; left:54px; border-bottom:2px solid rgba(25,163,232,.5); border-left:2px solid rgba(25,163,232,.5); }
+    .crop.br { bottom:54px; right:54px; border-bottom:2px solid rgba(25,163,232,.5); border-right:2px solid rgba(25,163,232,.5); }
+
+    .selo { font-family:'JetBrains Mono',monospace; font-weight:700; font-size:26px; letter-spacing:.5em; color:#19A3E8; padding-left:.5em; text-align:center; }
+
+    .kicker { font-family:'JetBrains Mono',monospace; font-weight:500; font-size:28px; color:#19A3E8; letter-spacing:.06em; margin-top:44px; }
+    .titulo { font-weight:800; font-size:56px; line-height:1.1; text-transform:uppercase; letter-spacing:-.01em; margin-top:18px; max-width:850px; }
+
+    .chart { flex:1; display:flex; align-items:flex-end; gap:56px; border-bottom:3px solid rgba(91,122,140,.55); padding:0 6px; margin:24px 0 20px; }
+    .col { display:flex; flex-direction:column; align-items:center; justify-content:flex-end; }
+    .pct { font-family:'Anton',sans-serif; font-size:78px; line-height:.9; color:#D43A1E; margin-bottom:14px; }
+    .bar { width:150px; background:#D43A1E; border-radius:8px 8px 0 0; }
+    .b1 { height:120px; } .b2 { height:250px; } .b3 { height:330px; }
+    .tlabel { font-family:'JetBrains Mono',monospace; font-weight:700; font-size:30px; color:#FFFFFF; margin-top:20px; letter-spacing:.04em; }
+
+    .apoio { font-weight:700; font-size:34px; line-height:1.4; color:#FFFFFF; max-width:900px; }
+    .meta { font-family:'JetBrains Mono',monospace; font-weight:500; font-size:24px; color:#5B7A8C; letter-spacing:.04em; text-align:center; margin-top:26px; }
+  </style>
+</head>
+<body>
+  <span class="crop tl"></span><span class="crop tr"></span><span class="crop bl"></span><span class="crop br"></span>
+
+  <div class="selo">‹ primodev ›</div>
+
+  <div class="kicker">// escada de abandono</div>
+  <h1 class="titulo">Cada segundo empurra mais gente pra fora.</h1>
+
+  <div class="chart">
+    <div class="col">
+      <div class="pct">+32%</div>
+      <div class="bar b1"></div>
+      <div class="tlabel">1s → 3s</div>
+    </div>
+    <div class="col">
+      <div class="pct">+90%</div>
+      <div class="bar b2"></div>
+      <div class="tlabel">1s → 5s</div>
+    </div>
+    <div class="col">
+      <div class="pct">+123%</div>
+      <div class="bar b3"></div>
+      <div class="tlabel">1s → 10s</div>
+    </div>
+  </div>
+
+  <p class="apoio">"Site lento" não incomoda um pouquinho. Ele derruba a chance de a pessoa ficar — e a queda acelera.</p>
+
+  <div class="meta">web performance · fonte: Google / SOASTA</div>
+</body>
+</html>

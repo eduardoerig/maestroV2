@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>🎻 Maestro Studio — Identidade da marca</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">🎻 <strong>Maestro Studio</strong> <span class="muted">· identidade visual e conteúdo</span></div>
+    <div class="top-actions">
+      <span id="status" class="status"></span>
+      <button id="btn-save" class="btn primary">💾 Gerar os .md</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <!-- passos -->
+    <nav class="steps" id="steps"></nav>
+
+    <!-- formulário -->
+    <section class="form" id="form">
+
+      <div class="step" data-step="marca">
+        <h2>Marca</h2>
+        <p class="hint">Por onde tudo começa. O <em>slug</em> é o nome da pasta do perfil.</p>
+        <label>Nome da marca <input id="nome" placeholder="Ex.: Padaria Aurora"></label>
+        <label>Slug (pasta) <input id="slug" placeholder="padaria-aurora"></label>
+        <label>Instagram (@) <input id="instagram" placeholder="@padariaaurora (opcional)"></label>
+      </div>
+
+      <div class="step" data-step="negocio" hidden>
+        <h2>Negócio</h2>
+        <label>O que a marca faz, em 1 frase? E o que faz que ninguém mais faz? <textarea id="oQueFaz"></textarea></label>
+        <label>Diferencial único <textarea id="diferencial"></textarea></label>
+        <label>Produto/serviço carro-chefe a impulsionar <input id="carroChefe"></label>
+        <label>Tamanho / maturidade (pessoa, time, empresa; há quanto tempo) <input id="tamanho"></label>
+      </div>
+
+      <div class="step" data-step="publico" hidden>
+        <h2>Público</h2>
+        <label>Cliente ideal (idade, lugar, momento de vida, profissão) <textarea id="clienteIdeal"></textarea></label>
+        <label>Maior DOR que vocês resolvem <textarea id="dor"></textarea></label>
+        <label>Maior DESEJO/sonho que vocês ajudam a realizar <textarea id="desejo"></textarea></label>
+      </div>
+
+      <div class="step" data-step="objetivo" hidden>
+        <h2>Objetivo do conteúdo</h2>
+        <label>O que o conteúdo precisa gerar?
+          <select id="meta">
+            <option value="autoridade">Autoridade</option>
+            <option value="vendas">Vendas</option>
+            <option value="comunidade">Comunidade</option>
+            <option value="alcance">Alcance</option>
+          </select>
+        </label>
+        <label>CTA padrão (ação que a pessoa toma ao fim do post) <input id="cta" placeholder="Ex.: Salve este post / Comente AURORA / Link na bio"></label>
+      </div>
+
+      <div class="step" data-step="voz" hidden>
+        <h2>Voz e personalidade</h2>
+        <label>Se a marca fosse uma pessoa, como falaria? <textarea id="comoFala" placeholder="formal/informal, séria/divertida, técnica/acessível"></textarea></label>
+        <p class="hint">3 palavras que a marca <strong>É</strong>:</p>
+        <div class="row"><input id="e1" placeholder="palavra 1"><input id="e2" placeholder="palavra 2"><input id="e3" placeholder="palavra 3"></div>
+        <p class="hint">3 palavras que a marca <strong>NUNCA</strong> seria:</p>
+        <div class="row"><input id="n1" placeholder="palavra 1"><input id="n2" placeholder="palavra 2"><input id="n3" placeholder="palavra 3"></div>
+        <label>Régua de formalidade: <output id="formalidadeOut">3</output>/5
+          <input id="formalidade" type="range" min="1" max="5" value="3">
+        </label>
+        <label>Usa emojis?
+          <select id="emojis">
+            <option value="não">Não</option>
+            <option value="sim, com moderação">Sim, com moderação</option>
+            <option value="sim, à vontade">Sim, à vontade</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="step" data-step="limites" hidden>
+        <h2>Limites <span class="muted">(essencial p/ não errar)</span></h2>
+        <label>Assunto, palavra ou tom PROIBIDO <textarea id="proibido"></textarea></label>
+        <label>Referências que admira <textarea id="referencias"></textarea></label>
+        <label>Anti-referência ("como NÃO fazer") <textarea id="antiReferencia"></textarea></label>
+      </div>
+
+      <div class="step" data-step="provas" hidden>
+        <h2>Provas e credibilidade</h2>
+        <label>Números, cases, depoimentos ou bastidores que dão credibilidade <textarea id="provas"></textarea></label>
+      </div>
+
+      <div class="step" data-step="essencia" hidden>
+        <h2>Essência <span class="muted">(guia de identidade)</span></h2>
+        <label>Missão em 1 frase <input id="missao"></label>
+        <label>Valores <input id="valores"></label>
+        <label>Arquétipo / personalidade <input id="arquetipo" placeholder="Ex.: O Artesão, O Sábio, O Herói"></label>
+      </div>
+
+      <div class="step" data-step="cores" hidden>
+        <h2>Sistema de cores 🎨</h2>
+        <p class="hint">Escolha as cores e veja o slide mudar ao vivo. (HEX exatos vão direto para o CSS.)</p>
+        <div class="colors">
+          <label class="color">Primária (fundo)<input id="corPrimaria" type="color" value="#1A1A2E"></label>
+          <label class="color">Secundária (destaque)<input id="corSecundaria" type="color" value="#E94560"></label>
+          <label class="color">Texto sobre escuro<input id="textoClaro" type="color" value="#FFFFFF"></label>
+          <label class="color">Texto sobre claro<input id="textoEscuro" type="color" value="#191919"></label>
+        </div>
+        <label>Cores de apoio/neutros (separe por vírgula) <input id="apoio" placeholder="#A0A0B8, #16213E"></label>
+        <div class="row">
+          <label>Uso da primária <input id="usoPrimaria" placeholder="fundos, blocos"></label>
+          <label>Uso da secundária <input id="usoSecundaria" placeholder="destaques, CTAs"></label>
+        </div>
+        <label>Fundo da capa
+          <select id="bgMode">
+            <option value="solid">Cor sólida (primária)</option>
+            <option value="gradient" selected>Gradiente da primária</option>
+          </select>
+        </label>
+        <fieldset class="preview-text">
+          <legend>Texto de exemplo da capa (só para o preview)</legend>
+          <label>Categoria <input id="pvKicker" placeholder="CAFÉ ARTESANAL"></label>
+          <label>Gancho (use *asteriscos* para destacar) <input id="pvHook" placeholder="O segredo do café que você *toma errado*"></label>
+          <label>Subtítulo <input id="pvSub" placeholder="3 ajustes que mudam tudo na primeira xícara."></label>
+        </fieldset>
+      </div>
+
+      <div class="step" data-step="tipografia" hidden>
+        <h2>Tipografia</h2>
+        <p class="hint">Fontes do Google (carregadas no slide via @import — sem custo).</p>
+        <div class="row">
+          <label>Fonte dos títulos <select id="fonteTitulo"></select></label>
+          <label>Fonte do corpo <select id="fonteCorpo"></select></label>
+        </div>
+        <label>Peso/caráter dos títulos <input id="pesoTitulo" placeholder="700, forte e condensado"></label>
+        <label>Hierarquia <input id="hierarquia" value="Capa 58–72px / Título 43px / Corpo 34px / Legenda 24px, peso 500+"></label>
+      </div>
+
+      <div class="step" data-step="direcao" hidden>
+        <h2>Direção visual <span class="muted">(para as imagens)</span></h2>
+        <label>Estilo <textarea id="estilo" placeholder="Ex.: minimalista, muito espaço negativo, luz quente"></textarea></label>
+        <label>Texturas/elementos reproduzíveis em CSS <textarea id="texturas" placeholder="gradiente linear da paleta, blocos de cor, moldura fina, grão sutil"></textarea></label>
+        <label>Composição <textarea id="composicao" placeholder="assimétrica, texto à esquerda, selo no rodapé"></textarea></label>
+        <label>O que NUNCA aparece <textarea id="nuncaAparece" placeholder="stock óbvio, gradientes neon, clipart"></textarea></label>
+      </div>
+
+      <div class="step" data-step="carrossel" hidden>
+        <h2>Regras do carrossel</h2>
+        <div class="row">
+          <label>Nº de slides <input id="slides" value="4–6"></label>
+          <label>Proporção <input id="proporcao" value="4:5 (1080×1350)"></label>
+        </div>
+        <label>Como é a capa (gancho visual) <input id="capa"></label>
+        <label>Texto sobre imagem (posição/contraste) <input id="textoSobreImagem" value="à esquerda, contraste WCAG ≥ 4.5:1"></label>
+        <label>Logo (onde e quando aparece) <input id="logo" placeholder="selo no rodapé do último slide"></label>
+        <label>CTA final (formato padrão) <input id="ctaFinal"></label>
+      </div>
+
+      <div class="step" data-step="faz" hidden>
+        <h2>Faça / Não faça</h2>
+        <div class="faz-grid">
+          <div class="faz-head">Faça ✅</div><div class="faz-head">Não faça ❌</div>
+          <input class="faca" placeholder=""><input class="naofaca" placeholder="">
+          <input class="faca" placeholder=""><input class="naofaca" placeholder="">
+          <input class="faca" placeholder=""><input class="naofaca" placeholder="">
+          <input class="faca" placeholder=""><input class="naofaca" placeholder="">
+        </div>
+      </div>
+
+      <div class="step" data-step="revisar" hidden>
+        <h2>Revisar e gerar</h2>
+        <p class="hint">Estes são os arquivos que serão gravados em <code>perfis/&lt;slug&gt;/</code>. Depois é só rodar <code>/maestro</code>.</p>
+        <div class="md-cols">
+          <div><h3>01-briefing.md</h3><pre id="md-briefing" class="md"></pre></div>
+          <div><h3>03-identidade-visual.md</h3><pre id="md-identidade" class="md"></pre></div>
+        </div>
+      </div>
+
+      <div class="nav">
+        <button id="btn-prev" class="btn">← Voltar</button>
+        <button id="btn-next" class="btn primary">Avançar →</button>
+      </div>
+    </section>
+
+    <!-- preview -->
+    <aside class="preview">
+      <h3>Preview da capa <span class="muted">(4:5)</span></h3>
+      <div class="preview-frame"><iframe id="pv" title="preview"></iframe></div>
+      <div class="swatches" id="swatches"></div>
+      <button id="btn-sample" class="btn">🖼️ Gerar PNG de exemplo (real)</button>
+      <div id="sample-out" class="sample-out"></div>
+      <p class="muted tiny">O PNG usa o mesmo motor gratuito do Felipe (HTML→PNG via Chromium). Nenhuma API paga.</p>
+    </aside>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>

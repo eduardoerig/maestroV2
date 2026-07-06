@@ -1,0 +1,20 @@
+{
+  "mcpServers": {
+    "google-scrape": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["../web-search/build/index.js"],
+      "env": {}
+    },
+    "multi-extract": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["../web-search-mcp/dist/index.js"],
+      "env": {}
+    },
+    "web-search-py": {
+      "type": "sse",
+      "url": "http://localhost:8003/sse"
+    }
+  }
+}

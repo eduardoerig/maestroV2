@@ -1,0 +1,33 @@
+---
+tipo: analise-visual
+perfil: {slug}
+fonte: "referencias | @handle | ambos"
+coletado_em: {AAAA-MM-DD}
+itens_analisados: {n}
+---
+
+# Análise visual — {Nome da Marca}
+
+> Fonte: imagens de referência em `assets/referencias/` e/ou o Instagram @{handle}.
+
+## Por item analisado
+### {arquivo ou post 1}
+- **Paleta (HEX aprox.):** #...., #...., #....  (uso de cada cor)
+- **Tipografia:** ...
+- **Composição:** alinhamento, espaço negativo, grid, selo/logo
+- **Luz/acabamento:** ... (se for foto)
+- **Por que funciona / o que evitar:** ...
+
+### {arquivo ou post 2}
+- ...
+
+## Síntese transversal (o estilo a replicar)
+- **Fio condutor (o que se repete em tudo):** ...
+- **Paleta consolidada (HEX):** primária #...., secundária #...., apoio #....
+- **Assinatura tipográfica:** ...
+- **Regra de composição recorrente:** ...
+- **O que NUNCA aparece:** ...
+
+## Diagnóstico (Bruno)
+- **Manter:** ...
+- **Cuidar para não quebrar o estilo:** ...

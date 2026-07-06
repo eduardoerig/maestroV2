@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap');
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      width:1080px; height:1080px; overflow:hidden;
+      font-family:'Montserrat',sans-serif;
+      background:linear-gradient(135deg,#0E2E3C 0%,#081320 100%);
+      color:#FFFFFF;
+      display:flex; flex-direction:column;
+      padding:64px 90px;
+    }
+
+    .crop { position:absolute; width:34px; height:34px; }
+    .crop.tl { top:54px; left:54px; border-top:2px solid rgba(25,163,232,.5); border-left:2px solid rgba(25,163,232,.5); }
+    .crop.tr { top:54px; right:54px; border-top:2px solid rgba(25,163,232,.5); border-right:2px solid rgba(25,163,232,.5); }
+    .crop.bl { bottom:54px; left:54px; border-bottom:2px solid rgba(25,163,232,.5); border-left:2px solid rgba(25,163,232,.5); }
+    .crop.br { bottom:54px; right:54px; border-bottom:2px solid rgba(25,163,232,.5); border-right:2px solid rgba(25,163,232,.5); }
+
+    .selo { font-family:'JetBrains Mono',monospace; font-weight:700; font-size:26px; letter-spacing:.5em; color:#19A3E8; padding-left:.5em; text-align:center; }
+
+    .kicker { font-family:'JetBrains Mono',monospace; font-weight:500; font-size:28px; color:#19A3E8; letter-spacing:.06em; margin-top:44px; }
+    .titulo { font-weight:800; font-size:54px; line-height:1.1; text-transform:uppercase; letter-spacing:-.01em; margin-top:18px; color:#2FA84F; max-width:860px; }
+
+    .mid { flex:1; display:flex; align-items:center; gap:48px; margin:14px 0; }
+    /* Anéis: <div> com border grosso (NÃO conic-gradient) — vira forma editável no Canva */
+    .ring { width:250px; height:250px; border-radius:50%; border:22px solid #2FA84F; display:flex; flex-direction:column; align-items:center; justify-content:center; }
+    .rnum { font-family:'Anton',sans-serif; font-size:76px; line-height:.86; color:#FFFFFF; }
+    .rcap { font-family:'JetBrains Mono',monospace; font-weight:500; font-size:22px; color:#2FA84F; margin-top:6px; letter-spacing:.02em; }
+
+    .seal { border:2px solid #19A3E8; border-radius:14px; padding:26px 28px; max-width:250px; }
+    .seal .tag { font-family:'JetBrains Mono',monospace; font-weight:700; font-size:22px; color:#19A3E8; letter-spacing:.08em; margin-bottom:12px; text-transform:uppercase; }
+    .seal .txt { font-weight:700; font-size:30px; line-height:1.22; color:#FFFFFF; }
+
+    .apoio { font-weight:700; font-size:34px; line-height:1.4; color:#FFFFFF; max-width:920px; }
+    .apoio .c { color:#19A3E8; }
+    .meta { font-family:'JetBrains Mono',monospace; font-weight:500; font-size:24px; color:#5B7A8C; letter-spacing:.04em; text-align:center; margin-top:26px; }
+  </style>
+</head>
+<body>
+  <span class="crop tl"></span><span class="crop tr"></span><span class="crop bl"></span><span class="crop br"></span>
+
+  <div class="selo">‹ primodev ›</div>
+
+  <div class="kicker">// o outro lado da moeda</div>
+  <h1 class="titulo">0,1 segundo move dinheiro de verdade.</h1>
+
+  <div class="mid">
+    <div class="ring"><div class="rnum">+8,4%</div><div class="rcap">conversão</div></div>
+    <div class="ring"><div class="rnum">+9,2%</div><div class="rcap">gasto</div></div>
+    <div class="seal">
+      <div class="tag">prejuízo duplo</div>
+      <div class="txt">Core Web Vitals = ranqueamento</div>
+    </div>
+  </div>
+
+  <p class="apoio">Melhorar a velocidade em só um décimo de segundo subiu a conversão em 8,4% e o gasto em 9,2% (Deloitte). E o <span class="c">Google usa velocidade pra ranquear</span>: o site lento vende menos agora e é achado por menos gente depois. Você paga a lentidão duas vezes.</p>
+
+  <div class="meta">web performance · fonte: Deloitte + Google (Core Web Vitals)</div>
+</body>
+</html>

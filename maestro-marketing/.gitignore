@@ -1,0 +1,19 @@
+node_modules/
+*.log
+
+# Entregas finais são derivadas (geradas por package.mjs a partir dos slides)
+entregas/
+
+# Estado de execução transitório do Maestro
+perfis/**/.estado.json
+
+# As imagens renderizadas (PNG) são derivadas dos HTMLs — versione o HTML, não o PNG.
+# Descomente se quiser ignorar os PNGs gerados:
+# perfis/**/imagens/*.png
+
+# Derivado da Fase 8: combinação dos slides numa página por slide p/ importar no
+# Canva. Regenerável por tools/build-canva-html.mjs — não versionar.
+perfis/**/imagens/carrossel.html
+
+# Link da entrega no Canva (conveniência de acesso local; não expor no repo público).
+perfis/**/LINK-CANVA.txt

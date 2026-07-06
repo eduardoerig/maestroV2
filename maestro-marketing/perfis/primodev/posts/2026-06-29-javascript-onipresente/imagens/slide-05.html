@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap');
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{width:1080px;height:1080px;overflow:hidden;position:relative;font-family:'Montserrat',sans-serif;color:#F3F7F8;
+    background:linear-gradient(165deg,#0E2E3C 0%,#07131F 100%);
+    display:flex;flex-direction:column;justify-content:center;padding:0 130px;}
+  .cm{position:absolute;width:30px;height:30px;border:0 solid rgba(25,163,232,.5);}
+  .tl{top:54px;left:54px;border-top-width:2px;border-left-width:2px;}
+  .tr{top:54px;right:54px;border-top-width:2px;border-right-width:2px;}
+  .bl{bottom:54px;left:54px;border-bottom-width:2px;border-left-width:2px;}
+  .br{bottom:54px;right:54px;border-bottom-width:2px;border-right-width:2px;}
+  .seal{position:absolute;top:70px;left:0;right:0;text-align:center;font-family:'JetBrains Mono';font-weight:700;font-size:22px;letter-spacing:7px;color:#19A3E8;}
+  .kicker{font-family:'JetBrains Mono';font-weight:500;font-size:24px;letter-spacing:3px;color:#C8543B;margin-bottom:26px;}
+  .title{font-family:'Montserrat';font-weight:800;font-size:54px;line-height:1.05;}
+  .title .rd{color:#D43A1E;}
+  .big{font-family:'Anton';font-size:172px;line-height:.86;color:#D43A1E;margin:18px 0 6px;letter-spacing:2px;}
+  .biglbl{font-family:'JetBrains Mono';font-weight:500;font-size:24px;letter-spacing:3px;color:#90a8b3;text-transform:uppercase;}
+  .sub{font-size:29px;font-weight:500;line-height:1.4;color:#9fb6c0;margin-top:40px;max-width:880px;}
+  .sub code{font-family:'JetBrains Mono';color:#cfe0e8;}
+  .meta{position:absolute;bottom:58px;left:0;right:0;text-align:center;font-family:'JetBrains Mono';font-size:18px;letter-spacing:3px;color:#52707d;}
+</style>
+</head>
+<body>
+  <span class="cm tl"></span><span class="cm tr"></span><span class="cm bl"></span><span class="cm br"></span>
+  <div class="seal">&#8249; primodev &#8250;</div>
+  <div class="kicker">// o risco</div>
+  <h1 class="title">Cada depend&ecirc;ncia &eacute; uma <span class="rd">porta</span></h1>
+  <div class="big">778.500</div>
+  <div class="biglbl">pacotes de malware &middot; 2024</div>
+  <p class="sub">Cada <code>npm install</code> puxa uma &aacute;rvore de c&oacute;digo de terceiros. Quanto mais voc&ecirc; depende, maior a porta que deixa aberta.</p>
+  <div class="meta">supply chain &middot; fonte: sonatype</div>
+</body>
+</html>

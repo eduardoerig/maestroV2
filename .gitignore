@@ -1,0 +1,14 @@
+# Dependências (reinstalar com `npm install` em cada pacote)
+**/node_modules/
+*.log
+npm-debug.log*
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Config local de preview do Claude Code (gerado por sessão)
+.claude/launch.json
+
+# Estado de execução transitório do Maestro
+**/perfis/**/.estado.json

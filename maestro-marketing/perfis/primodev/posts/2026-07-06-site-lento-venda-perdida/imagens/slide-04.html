@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap');
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      width:1080px; height:1080px; overflow:hidden;
+      font-family:'Montserrat',sans-serif;
+      background:linear-gradient(135deg,#0E2E3C 0%,#081320 100%);
+      color:#FFFFFF;
+      display:flex; flex-direction:column;
+      padding:64px 90px;
+    }
+
+    .crop { position:absolute; width:34px; height:34px; }
+    .crop.tl { top:54px; left:54px; border-top:2px solid rgba(25,163,232,.5); border-left:2px solid rgba(25,163,232,.5); }
+    .crop.tr { top:54px; right:54px; border-top:2px solid rgba(25,163,232,.5); border-right:2px solid rgba(25,163,232,.5); }
+    .crop.bl { bottom:54px; left:54px; border-bottom:2px solid rgba(25,163,232,.5); border-left:2px solid rgba(25,163,232,.5); }
+    .crop.br { bottom:54px; right:54px; border-bottom:2px solid rgba(25,163,232,.5); border-right:2px solid rgba(25,163,232,.5); }
+
+    .selo { font-family:'JetBrains Mono',monospace; font-weight:700; font-size:26px; letter-spacing:.5em; color:#19A3E8; padding-left:.5em; text-align:center; }
+
+    .kicker { font-family:'JetBrains Mono',monospace; font-weight:500; font-size:28px; color:#19A3E8; letter-spacing:.06em; margin-top:44px; }
+    .titulo { font-weight:800; font-size:54px; line-height:1.1; text-transform:uppercase; letter-spacing:-.01em; margin-top:18px; max-width:850px; }
+    .hero { font-family:'Anton',sans-serif; font-size:150px; line-height:.9; color:#D43A1E; margin-top:14px; letter-spacing:.005em; }
+
+    .rev { flex:1; display:flex; align-items:flex-end; gap:30px; margin:20px 0; }
+    .col { display:flex; flex-direction:column; align-items:flex-start; justify-content:flex-end; }
+    .val { font-family:'JetBrains Mono',monospace; font-weight:700; font-size:34px; margin-bottom:12px; }
+    .bar { border-radius:8px; }
+    .barA { width:230px; height:250px; background:#19A3E8; } .valA { color:#19A3E8; }
+    .barB { width:230px; height:92px; background:#D43A1E; } .valB { color:#D43A1E; }
+    .tlabel { font-family:'JetBrains Mono',monospace; font-weight:500; font-size:28px; color:#FFFFFF; margin-top:16px; }
+    .gap { display:flex; flex-direction:column; align-items:center; justify-content:flex-end; height:250px; padding-bottom:8px; }
+    .gaparrow { width:0; flex:1; border-left:3px dashed #D43A1E; margin-bottom:12px; }
+    .gaptag { font-family:'Anton',sans-serif; font-size:58px; color:#D43A1E; line-height:1; }
+
+    .apoio { font-weight:700; font-size:34px; line-height:1.4; color:#FFFFFF; max-width:920px; }
+    .apoio .r { color:#D43A1E; }
+    .meta { font-family:'JetBrains Mono',monospace; font-weight:500; font-size:24px; color:#5B7A8C; letter-spacing:.04em; text-align:center; margin-top:26px; }
+  </style>
+</head>
+<body>
+  <span class="crop tl"></span><span class="crop tr"></span><span class="crop bl"></span><span class="crop br"></span>
+
+  <div class="selo">‹ primodev ›</div>
+
+  <div class="kicker">// mesma verba, menos caixa</div>
+  <h1 class="titulo">US$965 que somem no mesmo tráfego.</h1>
+  <div class="hero">−US$965</div>
+
+  <div class="rev">
+    <div class="col">
+      <div class="val valA">US$1.525</div>
+      <div class="bar barA"></div>
+      <div class="tlabel">1s</div>
+    </div>
+    <div class="gap">
+      <div class="gaparrow"></div>
+      <div class="gaptag">−965</div>
+    </div>
+    <div class="col">
+      <div class="val valB">US$560</div>
+      <div class="bar barB"></div>
+      <div class="tlabel">3s</div>
+    </div>
+  </div>
+
+  <p class="apoio">1.000 visitantes, produto de US$50. O tráfego é o mesmo — você já pagou por ele. A lentidão apagou <span class="r">US$965</span> em vendas no caminho.</p>
+
+  <div class="meta">web performance · fonte: Portent (simulação)</div>
+</body>
+</html>

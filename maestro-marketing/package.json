@@ -1,0 +1,17 @@
+{
+  "name": "maestro-marketing",
+  "version": "1.0.0",
+  "description": "Maestro — equipe de marketing de IA que gera carrosséis de Instagram. Geração de imagem 100% gratuita (HTML/CSS -> PNG via Chromium headless), sem nenhuma API paga.",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "studio": "node studio/server.mjs",
+    "render": "node tools/render.mjs",
+    "package": "node tools/package.mjs",
+    "postinstall": "playwright install chromium"
+  },
+  "dependencies": {
+    "playwright": "^1.49.0"
+  }
+}

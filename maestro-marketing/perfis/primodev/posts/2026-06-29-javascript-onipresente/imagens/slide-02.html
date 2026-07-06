@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap');
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{width:1080px;height:1080px;overflow:hidden;position:relative;font-family:'Montserrat',sans-serif;color:#F3F7F8;
+    background:linear-gradient(165deg,#0E2E3C 0%,#07131F 100%);
+    display:flex;flex-direction:column;justify-content:center;padding:0 130px;}
+  .cm{position:absolute;width:30px;height:30px;border:0 solid rgba(25,163,232,.5);}
+  .tl{top:54px;left:54px;border-top-width:2px;border-left-width:2px;}
+  .tr{top:54px;right:54px;border-top-width:2px;border-right-width:2px;}
+  .bl{bottom:54px;left:54px;border-bottom-width:2px;border-left-width:2px;}
+  .br{bottom:54px;right:54px;border-bottom-width:2px;border-right-width:2px;}
+  .seal{position:absolute;top:70px;left:0;right:0;text-align:center;font-family:'JetBrains Mono';font-weight:700;font-size:22px;letter-spacing:7px;color:#19A3E8;}
+  .kicker{font-family:'JetBrains Mono';font-weight:500;font-size:24px;letter-spacing:3px;color:#7Fb3c9;margin-bottom:26px;}
+  .title{font-family:'Montserrat';font-weight:800;font-size:54px;line-height:1.05;}
+  .title .cy{color:#19A3E8;}
+  .chart{display:flex;align-items:flex-end;gap:54px;margin:54px 0 0;height:300px;}
+  .col{display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end;height:100%;}
+  .val{font-family:'Anton';font-size:58px;line-height:1;margin-bottom:16px;}
+  .bar{width:158px;border-radius:6px 6px 0 0;}
+  .b19{height:166px;background:#274d5e;}
+  .b24{height:258px;background:#19A3E8;}
+  .yr{font-family:'JetBrains Mono';font-weight:500;font-size:24px;letter-spacing:2px;color:#90a8b3;margin-top:18px;}
+  .sub{font-size:29px;font-weight:500;line-height:1.4;color:#9fb6c0;margin-top:46px;max-width:860px;}
+  .meta{position:absolute;bottom:58px;left:0;right:0;text-align:center;font-family:'JetBrains Mono';font-size:18px;letter-spacing:3px;color:#52707d;}
+</style>
+</head>
+<body>
+  <span class="cm tl"></span><span class="cm tr"></span><span class="cm bl"></span><span class="cm br"></span>
+  <div class="seal">&#8249; primodev &#8250;</div>
+  <div class="kicker">// o peso</div>
+  <h1 class="title">Virou padr&atilde;o pra tudo.<br>E <span class="cy">engordou</span>.</h1>
+  <div class="chart">
+    <div class="col"><div class="val" style="color:#7d97a3;">359</div><div class="bar b19"></div><div class="yr">2019</div></div>
+    <div class="col"><div class="val" style="color:#19A3E8;">558</div><div class="bar b24"></div><div class="yr">2024</div></div>
+  </div>
+  <p class="sub">Kilobytes de JavaScript na mediana de uma p&aacute;gina, no celular. Quase dobrou.</p>
+  <div class="meta">web performance &middot; fonte: web almanac 2024</div>
+</body>
+</html>

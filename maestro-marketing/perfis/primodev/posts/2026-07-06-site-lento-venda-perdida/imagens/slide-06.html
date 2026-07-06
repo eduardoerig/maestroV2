@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap');
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      width:1080px; height:1080px; overflow:hidden;
+      font-family:'Montserrat',sans-serif;
+      background:linear-gradient(135deg,#0E2E3C 0%,#081320 100%);
+      color:#FFFFFF;
+      display:flex; flex-direction:column;
+      padding:64px 90px;
+    }
+
+    .crop { position:absolute; width:34px; height:34px; }
+    .crop.tl { top:54px; left:54px; border-top:2px solid rgba(25,163,232,.5); border-left:2px solid rgba(25,163,232,.5); }
+    .crop.tr { top:54px; right:54px; border-top:2px solid rgba(25,163,232,.5); border-right:2px solid rgba(25,163,232,.5); }
+    .crop.bl { bottom:54px; left:54px; border-bottom:2px solid rgba(25,163,232,.5); border-left:2px solid rgba(25,163,232,.5); }
+    .crop.br { bottom:54px; right:54px; border-bottom:2px solid rgba(25,163,232,.5); border-right:2px solid rgba(25,163,232,.5); }
+
+    .selo { font-family:'JetBrains Mono',monospace; font-weight:700; font-size:26px; letter-spacing:.5em; color:#19A3E8; padding-left:.5em; text-align:center; }
+
+    .kicker { font-family:'JetBrains Mono',monospace; font-weight:500; font-size:28px; color:#19A3E8; letter-spacing:.06em; margin-top:44px; }
+    .fecho { font-weight:800; font-size:52px; line-height:1.14; text-transform:uppercase; letter-spacing:-.01em; margin-top:22px; max-width:900px; }
+    .fecho .r { color:#D43A1E; }
+    .reforco { font-weight:600; font-size:36px; line-height:1.34; color:#FFFFFF; margin-top:34px; max-width:880px; }
+
+    .spacer { flex:1; }
+
+    .cta { display:inline-flex; align-items:center; align-self:flex-start; border:3px solid #F4C20D; border-radius:16px; padding:30px 52px; margin-top:20px; }
+    .cta span { font-family:'JetBrains Mono',monospace; font-weight:700; font-size:40px; color:#F4C20D; letter-spacing:.04em; }
+
+    .echo { align-self:flex-start; margin-top:38px; border-left:3px solid rgba(91,122,140,.7); padding-left:22px; }
+    .echo .line { font-family:'JetBrains Mono',monospace; font-weight:500; font-size:26px; color:#5B7A8C; letter-spacing:.02em; line-height:1.5; }
+    .echo .c { color:#19A3E8; }
+
+    .meta { font-family:'JetBrains Mono',monospace; font-weight:500; font-size:24px; color:#5B7A8C; letter-spacing:.04em; text-align:center; margin-top:30px; }
+  </style>
+</head>
+<body>
+  <span class="crop tl"></span><span class="crop tr"></span><span class="crop bl"></span><span class="crop br"></span>
+
+  <div class="selo">‹ primodev ›</div>
+
+  <div class="kicker">// conserto que se paga</div>
+  <h1 class="fecho">O site "econômico" que trava é o <span class="r">mais caro</span> que existe. O boleto dele chega todo mês, disfarçado de venda que não aconteceu.</h1>
+  <p class="reforco">Velocidade não é capricho de programador. É linha do seu faturamento.</p>
+
+  <div class="spacer"></div>
+
+  <div class="cta"><span>chama no direct →</span></div>
+
+  <div class="echo">
+    <div class="line"><span class="c">53%</span> somem · <span class="c">US$965</span>/1k perdidos</div>
+  </div>
+
+  <div class="meta">‹ _primodev › · tecnologia que vira resultado</div>
+</body>
+</html>

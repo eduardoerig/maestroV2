@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <!--
+    Template base de slide (4:5 — 1080x1350) para o Felipe (Diretor de Arte).
+    Regras: autocontido (CSS inline), única exceção é Google Fonts via @import.
+    Troque as cores #HEX pelas da marca (03-identidade-visual.md).
+    Mínimos de fonte (IG carrossel): hero 58 / título 43 / corpo 34 / legenda 24. Peso 500+.
+    Linguagem visual: TODO slide carrega um elemento gráfico próprio (SVG/CSS), não só a capa.
+    Renderize com:  node tools/render.mjs <pasta-imagens>
+  -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap');
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1080px; height: 1350px; overflow: hidden;
+      font-family: 'Inter', sans-serif;
+      background: #1A1A2E;            /* cor/gradiente da paleta da marca */
+      color: #FFFFFF;                  /* texto com contraste >= 4.5:1 */
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 90px;
+    }
+    .kicker { font-size: 28px; font-weight: 600; letter-spacing: 2px;
+              text-transform: uppercase; color: #E94560; }
+    .hook   { font-size: 64px; font-weight: 700; line-height: 1.2; margin-top: 24px; }
+    .hook .accent { color: #E94560; }
+    .sub    { font-size: 34px; font-weight: 500; line-height: 1.5;
+              color: #A0A0B8; margin-top: 28px; max-width: 820px; }
+    .footer { position: absolute; bottom: 64px; left: 90px;
+              font-size: 24px; font-weight: 500; color: #A0A0B8; }
+  </style>
+</head>
+<body>
+  <span class="kicker">Categoria / marca</span>
+  <!-- Elemento visual do slide (construído em SVG/CSS, sem API paga). Troque o path pelo ícone da cena. -->
+  <svg width="110" height="110" viewBox="0 0 24 24" fill="none"
+       stroke="#E94560" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+       style="margin-top:24px;">
+    <path d="M3 3h18l-7 9v7l-4 2v-9z"/>
+  </svg>
+  <h1 class="hook">Gancho da <span class="accent">capa</span> que para o scroll</h1>
+  <p class="sub">Subtítulo de apoio na voz da marca, curto e escaneável.</p>
+  <span class="footer">@perfil</span>
+</body>
+</html>
